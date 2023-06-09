@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helper\Country;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class TicketController extends Controller
      */
     public function create()
     {
-        //
+        $countries = Country::getAllCountries();
+        return view("ticket.ticket-purchase-form", compact("countries"));
     }
 
     /**
@@ -62,4 +64,5 @@ class TicketController extends Controller
     {
         //
     }
+
 }

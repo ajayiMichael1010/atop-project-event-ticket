@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("ticket_order_ref");
             $table->string("charges_per_ticket");
             $table->integer("total_tickets");
+            $table->integer("user_id");
         });
     }
 
