@@ -14,4 +14,4 @@ jobs:
           server: atopprojects.com
           username: atoppro@atopprojects.com
           password: G3V3ui5Oj)!bZ2
-          server-dir: public_html/event.atopprojects.com
+          server-dir: public_html/event.atopprojects.com/
