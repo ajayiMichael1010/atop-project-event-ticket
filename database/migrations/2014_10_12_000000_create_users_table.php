@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('full_name');
             $table->string("country");
-            $table->string("state");
-            $table->text("address");
+            $table->string("city");
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string("role");
             $table->rememberToken();
             $table->timestamps();
         });

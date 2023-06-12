@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('ticket_orders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("ticket_type_id");
             $table->string("ticket_order_ref");
             $table->string("charges_per_ticket");
             $table->integer("total_tickets");
+            $table->string("ticket_option")->nullable();
+            $table->integer("event_id");
             $table->integer("user_id");
+            $table->boolean("isTicketPaymentConfirmed")->nullable();
         });
     }
 
