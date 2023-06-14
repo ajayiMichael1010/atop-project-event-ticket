@@ -23,6 +23,11 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
 
+      - name: Artisan serve
+        run: php artisan serve
+      - name: php artisan storage
+        run: php artisan storage:link
+
 #      - name: Config clearing
 #        run: php artisan config:clear
 #      - name: Cache clearing
