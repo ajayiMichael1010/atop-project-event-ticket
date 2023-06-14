@@ -27,12 +27,12 @@ jobs:
         run: php artisan config:clear
       - name: Cache clearing
         run: php artisan cache:clear
-      - name: Route clearing
-        run: php artisan route:clear
-      - name: Config cache
-        run: php artisan config:cache
-      - name: Route cache
-        run: php artisan route:cache
+#      - name: Route clearing
+#        run: php artisan route:clear
+#      - name: Config cache
+#        run: php artisan config:cache
+#      - name: Route cache
+#        run: php artisan route:cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
