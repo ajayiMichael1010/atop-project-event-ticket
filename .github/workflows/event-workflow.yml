@@ -20,8 +20,6 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-      - name: Artisan serve
-        run: php artisan serve
       - name: php artisan storage
         run: php artisan storage:link
 
