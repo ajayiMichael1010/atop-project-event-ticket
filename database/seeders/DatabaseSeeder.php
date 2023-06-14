@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(DefaultAdmin::class);
         $this->call(EventSeeder::class);
+        $this->call(PrimeHomeEstateSeeder::class);
 
     }
 }
