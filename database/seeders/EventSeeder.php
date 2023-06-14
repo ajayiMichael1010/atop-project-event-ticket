@@ -26,7 +26,7 @@ class EventSeeder extends Seeder
             "event_venue_image_url" => "https://res.cloudinary.com/dg8z8uh8f/image/upload/v1686562320/unhmsxy1mrgf6qhg1hcu.jpg",
         ]);
         Event::create([
-            "event_title" => "Raffle Draw",
+            "event_title" => "Raffle Drawn,  of 2bedroom flat at Prime Home Estate.",
             "event_description" =>"Win big when you participate in the raffle draw",
             "event_venue" => "Burgerzentrum-Ulrich-Strabe 9, 64331 Weiterstadt HBF Training -Station",
             "event_date" => "2023-06-29",

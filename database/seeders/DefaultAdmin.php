@@ -18,6 +18,7 @@ class DefaultAdmin extends Seeder
             "country" => "Nigeria",
             "city" => "Lagos",
             "email" => "atopproject@gmail.com",
+            "phone_number" => "+234) 0806 293 7553",
             "password" => "12345678",
             "role" => "ROLE_ADMIN"
         ]);

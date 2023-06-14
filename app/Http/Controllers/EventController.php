@@ -6,40 +6,55 @@ use App\Http\Helper\Country;
 use App\Http\Helper\CurrencyConverter;
 use App\Http\Requests\EventRequest;
 use App\Http\Requests\TicketOrderRequest;
+use App\Http\Services\EstateService;
 use App\Http\Services\EventService;
 use App\Models\Event;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+
 
 class EventController extends BaseController
 {
-
+    private EstateService $estateService;
     private EventService $eventService;
 
     /**
+     * @param EstateService $estateService
      * @param EventService $eventService
      */
-    public function __construct(EventService $eventService)
+    public function __construct(EstateService $estateService, EventService $eventService)
     {
+        $this->estateService = $estateService;
         $this->eventService = $eventService;
-        Parent::__construct();
     }
 
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function home()
     {
         $pageTitle = "Event List";
         $events = $this->eventService->getAllEvents();
         $defaultCurrencySymbol = CurrencyConverter::DEFAULT_CURRENCY["symbol"];
-        return view("event.index", compact("events","pageTitle","defaultCurrencySymbol"));
+        $estates = $this->estateService->getEstates();
+        return view("event.index", compact("events", "pageTitle","defaultCurrencySymbol","estates"));
+    }
+    public function index()
+    {
+        $pageTitle = "Orders ";
+       $ticketOrders =  $this->eventService->getAllOrderedTickets();
+        return view("event.dashboard", compact(
+            "ticketOrders",
+            "pageTitle"
+        ));
     }
 
     public function eventList(){
         $pageTitle = "Event List";
         $events = $this->eventService->getAllEvents();
-        return view("event.index", compact("events","pageTitle"));
+        $defaultCurrencySymbol = CurrencyConverter::DEFAULT_CURRENCY["symbol"];
+        return view("event.event-list", compact("events","pageTitle","defaultCurrencySymbol"));
     }
 
     /**
@@ -111,7 +126,20 @@ class EventController extends BaseController
 
     public function buyTicket(TicketOrderRequest $request)
     {
-        return $this->eventService->buyEventTicket($request);
+        $eventTicketOrderResponse = $this->eventService->buyEventTicket($request);
+        return response()->json($eventTicketOrderResponse,200, []);
+    }
+
+    public function getTicketInvoice()
+    {
+        return view("event.invoice" , compact([]));
+    }
+
+    public function updateIsPaymentConfirmed(int $ticketId): JsonResponse
+    {
+        $isPaymentConfirmed = $this->eventService->updateIsEventPaymentConfirmed($ticketId);
+
+        return response()->json($isPaymentConfirmed,200,[]);
     }
 
 }

@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\PrimeHomeEstateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\AccountingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post("converted-amount", [AccountingController::class,"convertCurrency"])->name("convertCurrency");
+Route::post('buy-ticket', [EventController::class, 'buyTicket'])->name('buyTicket');
+Route::put('update-payment-confirmation/{ticketId}', [EventController::class, 'updateIsPaymentConfirmed'])->name('updateIsPaymentConfirmed');
+//Route::get("/estate", [PrimeHomeEstateController::class, 'getEstates'])->name('getEstate');

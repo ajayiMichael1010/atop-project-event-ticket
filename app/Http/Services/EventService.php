@@ -18,7 +18,7 @@ interface EventService
     //TICKET OPERATIONS
     public function buyEventTicket(TicketOrderRequest $request);
     public function getAllOrderedTickets();
-    public function updateEventPaymentConfirmation(int $ticketId);
+    public function updateIsEventPaymentConfirmed(int $ticketId);
     public function deleteTicketById(int $ticketId);
 
 }

@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('event.index') }}">
+                    <a href="{{ route('home') }}">
 {{--                        <img src="{{config('app.url')}}/storage/images/atoplogoreal.png" />--}}
                         <img src="http://127.0.0.1:8000/storage/images/atoplogoreal.png" width="120" />
                     </a>
@@ -13,7 +13,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('event.index')" :active="request()->routeIs('event.index')">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
                 </div>

@@ -12,7 +12,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('event.index')" :active="request()->routeIs('event.index')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
@@ -33,10 +33,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('showTicketOrders')" :active="request()->routeIs('showTicketOrders')">
-                        {{ __('Ticket Orders') }}
+                    <x-nav-link :href="route('estate.create')" :active="request()->routeIs('estate.create')">
+                        {{ __('Estate') }}
                     </x-nav-link>
                 </div>
+
             </div>
 
             <!-- Settings Dropdown -->

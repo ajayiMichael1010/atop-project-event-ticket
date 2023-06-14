@@ -2,6 +2,7 @@
 
 namespace App\Http\Services\ServiceImpl;
 
+use App\Http\Helper\CurrencyConverter;
 use App\Http\Services\EventService;
 use App\Http\Enums\UserRole;
 use App\Http\Requests\EventRequest;
@@ -91,33 +92,48 @@ class EventServiceImpl implements EventService
         $event->save();
     }
 
-    public function buyEventTicket(TicketOrderRequest $request): void
+    public function buyEventTicket(TicketOrderRequest $request): array
     {
         $user = $this->registerBasicUserDetails([
-            'full_name' => $request->fullName,
+            'fullName' => "$request->fullName",
             'country' => $request->country,
             'city' => $request->city,
             'email' =>$request->email,
+            'phoneNumber' => $request->phoneNumber,
             'password' =>"evenT@2023",
             'role' => UserRole::ROLE_USER,
         ]);
 
+        $chargesPerTicket = $request->chargesPerTicket;
+        $defaultCurrency = CurrencyConverter::DEFAULT_CURRENCY['shortName'];
+        $newCurrencyType = $request->currencyType;
+        $chargesAfterConversion = CurrencyConverter::getConvertedAmount($chargesPerTicket,$defaultCurrency,$newCurrencyType);
+        $totalCharges = $chargesAfterConversion['convertedAmount'] * $request->totalTickets;
+
+        $newTicketId  = TicketOrder::latest()->value('id');
 
         $eventTicketOrder = new TicketOrder;
-        $eventTicketOrder->ticket_order_ref = Str::uuid()->toString();
-        $eventTicketOrder->charges_per_event = $request->chargesPerEvent;
+        $eventTicketOrder->ticket_order_ref = $newTicketId.rand(10000, 99999);
+        $eventTicketOrder->unconverted_charges_per_ticket = $chargesPerTicket;
+        $eventTicketOrder->charges_per_ticket = $chargesAfterConversion['convertedAmount'];
         $eventTicketOrder->total_tickets = $request->totalTickets;
-        $eventTicketOrder->ticket_option = $request->ticketOption;
+        $eventTicketOrder->total_charges = $totalCharges;
+        $eventTicketOrder->currency_type = $newCurrencyType;
         $eventTicketOrder->event_id = $request->eventId;
         $eventTicketOrder->user_id = $user->id;
 
         $eventTicketOrder->save();
 
+        return TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
+
     }
 
     public function getAllOrderedTickets(): array
     {
-        $eventTicketOrder = TicketOrder::with('getEvent','getUser')->get();
+        $eventTicketOrder = TicketOrder::with('getEvent','getUser')
+            ->orderby("is_ticket_payment_confirmed","DESC")
+            ->paginate(100);
+
         return TicketOrderResponse::mapAllTicketOrders($eventTicketOrder);
     }
 
@@ -127,10 +143,12 @@ class EventServiceImpl implements EventService
         return TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
     }
 
-    public function updateEventPaymentConfirmation(int $ticketId): void
+    public function updateIsEventPaymentConfirmed(int $ticketId)
     {
         $eventTicketOrder = TicketOrder::findOrFail($ticketId);
-        $eventTicketOrder->is_ticket_payment_confirmed = true;
+        $eventTicketOrder->is_ticket_payment_confirmed = !$eventTicketOrder->is_ticket_payment_confirmed;
         $eventTicketOrder->save();
+
+        return $eventTicketOrder->is_ticket_payment_confirmed;
     }
 }

@@ -15,12 +15,15 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string("ticket_order_ref");
+            $table->string("unconverted_charges_per_ticket");
             $table->string("charges_per_ticket");
             $table->integer("total_tickets");
+            $table->integer("total_charges");
             $table->string("ticket_option")->nullable();
             $table->integer("event_id");
             $table->integer("user_id");
-            $table->boolean("isTicketPaymentConfirmed")->nullable();
+            $table->string("currency_type");
+            $table->boolean("is_ticket_payment_confirmed")->nullable();
         });
     }
 
