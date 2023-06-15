@@ -33,24 +33,30 @@
                        <span class="visually-hidden">Next</span>
                    </button>
                </div>
-               <div class="count-down-display">
-                   <div>
-                       <span class="text-center uppercase" style="font-size: 1.5rem">Upcoming Event</span>
-                       <a href="#ticketShowcase" type="button" class="btn btn-primary"
-                               style="background-color: goldenrod;font-size: 1rem; color: #fff;font-weight: bold">Buy Ticket</a>
-                   </div>
-                   <div class="countdown-container mt-3">
-                       <div id="countdowntimer"></div>
-                   </div>
-                   <div class="uppercase mt-3 shadow countdown-text">
-                       <span style="color: goldenrod;font-size:1.6rem;">Countdown to</span> <br> RAFFLE DRAWN, OF 2BEDROOM FLAT AT PRIME HOME ESTATE <span style="color:goldenrod;font-size:1.6rem">&</span><br>
-                       NOLLYWOOD FILM FESTIVAL GERMANY &
-                       NEGA AWARDS GALA NITE
+           </div>
+
+           <div class="row">
+               <div class="col-md-12">
+                   <div class="count-down-display p-2 shadow">
+                       <div>
+                           <span class="text-center uppercase" style="font-size: 1.5rem">Upcoming Event</span>
+                           <a href="#ticketShowcase" type="button" class="btn btn-primary"
+                              style="background-color: goldenrod;font-size: 1rem; color: #fff;font-weight: bold">Buy Ticket</a>
+                       </div>
+                       <div class="countdown-container mt-3">
+                           <div id="countdowntimer"></div>
+                       </div>
+                       <div class="uppercase mt-3 shadow countdown-text">
+                           <span style="color: goldenrod;font-size:1.6rem;">Countdown to</span> <br> RAFFLE DRAWN, OF 2BEDROOM FLAT AT PRIME HOME ESTATE <span style="color:goldenrod;font-size:1.6rem">&</span><br>
+                           NOLLYWOOD FILM FESTIVAL GERMANY &
+                           NEGA AWARDS GALA NITE
+                       </div>
                    </div>
                </div>
-
            </div>
+
        </div>
+
 
        @foreach($events as $event)
            <div class="row align-items-center justify-content-center mt-3" id="ticketShowcase">
