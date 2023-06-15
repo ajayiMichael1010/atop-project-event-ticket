@@ -26,16 +26,16 @@ jobs:
         run: php artisan cache:clear
       - name: Route clearing
         run: php artisan route:clear
+
       - name: Composer dump autoload
         run: composer dump-autoload --optimize
+      - name: php Artisan optimize
+        run: php artisan optimize
 
-#      - name: Config cache
-#        run: php artisan config:cache
-#      - name: Route cache
-#        run: php artisan route:cache
-#      - name: php Artisan optimize
-#        run: php artisan optimize
-
+      - name: Config cache
+        run: php artisan config:cache
+      - name: Route cache
+        run: php artisan route:cache
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
