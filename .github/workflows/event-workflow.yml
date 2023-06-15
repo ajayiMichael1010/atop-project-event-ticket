@@ -32,8 +32,8 @@ jobs:
       - name: php Artisan optimize
         run: php artisan optimize
 
-      - name: Route cache
-        run: php artisan route:cache
+#      - name: Route cache
+#        run: php artisan route:cache
 #      - name: Config cache
 #        run: php artisan config:cache
 
