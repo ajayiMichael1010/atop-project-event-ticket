@@ -23,7 +23,7 @@
                 background-color: #fff;
             }
             .count-down-display{
-                position: absolute;
+                position: relative;
                 top:20px;
                 left:20px;
             }
@@ -47,7 +47,10 @@
                     margin-top: 0px;
                 }
 
-                .count-down-display {
+                .count-down-display{
+                    position: absolute;
+                    top:20px;
+                    left:20px;
                     color: #1f2937;
                 }
 
