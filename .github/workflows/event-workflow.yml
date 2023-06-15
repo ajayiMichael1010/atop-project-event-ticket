@@ -34,8 +34,8 @@ jobs:
 
 #      - name: Route cache
 #        run: php artisan route:cache
-#      - name: Config cache
-#        run: php artisan config:cache
+      - name: Config cache
+        run: php artisan config:cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
