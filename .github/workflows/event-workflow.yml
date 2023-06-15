@@ -20,22 +20,26 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-      - name: Config clearing
+      - name: Clear Config Cache
         run: php artisan config:clear
-      - name: Cache clearing
+
+      - name: Clear Application Cache
         run: php artisan cache:clear
-      - name: Route clearing
+
+      - name: Clear Route Cache
         run: php artisan route:clear
 
-      - name: Composer dump autoload
+      - name: Composer Dump Autoload
         run: composer dump-autoload --optimize
-      - name: php Artisan optimize
+
+      - name: Optimize Artisan
         run: php artisan optimize
 
-      - name: Route cache
+      - name: Cache Routes
         run: php artisan route:cache
-#      - name: Config cache
-#        run: php artisan config:cache
+
+      - name: Cache Config
+        run: php artisan config:cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
