@@ -20,14 +20,14 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-      - name: Clear Config Cache
-        run: php artisan config:clear
-
-      - name: Clear Application Cache
-        run: php artisan cache:clear
-
-      - name: Clear Route Cache
-        run: php artisan route:clear
+#      - name: Clear Config Cache
+#        run: php artisan config:clear
+#
+#      - name: Clear Application Cache
+#        run: php artisan cache:clear
+#
+#      - name: Clear Route Cache
+#        run: php artisan route:clear
 
       - name: Composer Dump Autoload
         run: composer dump-autoload --optimize
