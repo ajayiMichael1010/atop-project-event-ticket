@@ -20,9 +20,6 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-      - name: php artisan storage
-        run: php artisan storage:link
-
       - name: Config clearing
         run: php artisan config:clear
       - name: Cache clearing
@@ -31,6 +28,7 @@ jobs:
         run: php artisan route:clear
       - name: Composer dump autoload
         run: composer dump-autoload --optimize
+
 #      - name: Config cache
 #        run: php artisan config:cache
 #      - name: Route cache
