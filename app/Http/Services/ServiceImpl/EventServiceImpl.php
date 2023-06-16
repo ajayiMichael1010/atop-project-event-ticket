@@ -167,7 +167,7 @@ class EventServiceImpl implements EventService
     public function getAllOrderedTickets(): array
     {
         $eventTicketOrder = TicketOrder::with('getEvent','getUser')
-            ->orderby("is_ticket_payment_confirmed","DESC")
+            ->orderby("created_at","DESC")
             ->paginate(100);
 
         return TicketOrderResponse::mapAllTicketOrders($eventTicketOrder);
