@@ -29,8 +29,8 @@ jobs:
 #      - name: Clear Route Cache
 #        run: php artisan route:clear
 
-      - name: Composer Dump Autoload
-        run: composer dump-autoload --optimize
+#      - name: Composer Dump Autoload
+#        run: composer dump-autoload --optimize
 
 #      - name: Optimize Artisan
 #        run: php artisan optimize
