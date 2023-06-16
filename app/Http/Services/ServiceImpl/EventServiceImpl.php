@@ -152,7 +152,7 @@ class EventServiceImpl implements EventService
 //        Mail::to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
 //            ->send(new TicketOrderMail($order));
 
-        Mail::send([], [], function ($message) use ($pdf) {
+        Mail::send(["html"=>"emails.orders.pdf-ticket-invoice"], ["order" => $order], function ($message) use ($pdf) {
             $message->to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
                 ->subject('Invoice Receipt')
                 ->attachData($pdf->output(), 'invoice.pdf');

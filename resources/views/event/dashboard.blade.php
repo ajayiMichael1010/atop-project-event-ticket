@@ -8,7 +8,8 @@
     <div class="row">
         <div class="col-md-12">
             <h5 class="display-5 text-center">{{$pageTitle}}</h5>
-            <table class="table table-bordered table-striped mt-3">
+            <div class="table-responsive">
+            <table class="table table-responsive table-bordered table-striped mt-3">
                 <thead>
                 <tr><th>Full Name</th>
                     <th>Email</th>
@@ -48,6 +49,7 @@
                 @endforeach
                 </tbody>
             </table>
+            </div>
             <div class="col-md-12" style="padding:20px;"><!---PAGA NUMBERS --!></div>
         </div>
     </div>

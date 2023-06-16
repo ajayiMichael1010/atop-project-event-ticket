@@ -13,6 +13,31 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+
+            #top{
+                background-color: goldenrod;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                float: right;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer-main-color{
+                background-color: #eee;
+                color: #fff;
+            }
+
+            footer h2{
+                margin-bottom: 10px;
+                color: goldenrod;
+            }
+
+            footer p{
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+            }
             .countdown-text{
                 display: none;
             }
@@ -96,8 +121,8 @@
             </main>
 
                 <footer class="mt-3">
-                    <div class="bg-goldenrod p-4">
-                        <div class="container text-center" style="color: #374151;">
+                    <div class="footer-main-color p-4">
+                        <div class="container" style="color: #374151;">
                             <div class="row ">
 
                                 <div class="col-md-6 mt-3">
@@ -121,11 +146,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-light p-4">
+                    <div class="bg-light p-2">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="container">
-                                    <p class="float-end"><a href="#">Back to top</a></p>
+                                    <div id="top"><p class="float-end"><a href="#">&#8593;</a></p></div>
                                     <p>&copy; 2023 Atop Projects Ltd</p>
                                 </div>
 

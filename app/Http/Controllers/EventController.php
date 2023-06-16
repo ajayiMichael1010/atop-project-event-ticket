@@ -10,7 +10,6 @@ use App\Http\Services\DocumentMakerService;
 use App\Http\Services\EstateService;
 use App\Http\Services\EventService;
 use App\Models\Event;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 

@@ -24,10 +24,6 @@
     .invoice-size{
         width : 70%;
     }
-    .sender-and-recipient-wrapper{
-        display: flex;
-        justify-content: space-between;
-    }
 
     table {
         margin-top: 10px;
@@ -56,6 +52,7 @@
     ul li{
         line-height: 1.6rem;
     }
+
 </style>
 
 
@@ -67,14 +64,10 @@
         </div>
         <div id="invoice-title" style="text-align: center">Invoice</div>
 
-        <div class="sender-and-recipient-wrapper">
-
-        </div>
-
-        <table>
+        <table class="receipt-owner">
             <thead>
                 <tr>
-                    <td> <div>
+                    <td width="500" style="width:500px !important;">
                             <ul class="">
                                 <li class="text-muted">From: <span style="color:#5d9fc5 ;">ATOP Projects Ltd</span></li>
                                 <li class="text-muted">2, Church Street, off Asajon Street,<br>
@@ -82,8 +75,8 @@
                                 <li class="text-muted">Lagos, Nigeria</li>
                                 <li class="text-muted"><i class="fas fa-phone"></i> (+234) 0806 229 1780 </li>
                             </ul>
-                        </div></td>
-                    <td><div>
+                        </td>
+                    <td width="300" style="width:300px">
                             <ul class="">
                                 <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{$order['userDetails']['full_name']}}</span></li>
                                 <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
@@ -94,7 +87,7 @@
                                         class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold" style="color: orangered">
                   Unpaid</span></li>
                             </ul>
-                        </div></td>
+                        </td>
                 </tr>
             </thead>
         </table>
