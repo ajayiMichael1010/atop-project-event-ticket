@@ -200,7 +200,7 @@
 
     // Add an event listener for form submission
     form.addEventListener('submit', (e) => {
-       // e.preventDefault(); // Prevent the default form submission
+        e.preventDefault(); // Prevent the default form submission
         selectElement("#submitLoader").style.display="block";
 
         // Create a FormData object to store the form data
