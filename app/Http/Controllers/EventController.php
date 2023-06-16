@@ -152,4 +152,9 @@ class EventController extends BaseController
         return response()->json($isPaymentConfirmed,200,[]);
     }
 
+    public function getServerInfo(){
+        phpinfo();
+        return view("event.info", []);
+    }
+
 }
