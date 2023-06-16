@@ -60,6 +60,7 @@
     <div class="invoice-size">
 
         <div id="header">
+            <img src="https://res.cloudinary.com/dg8z8uh8f/image/upload/v1686923602/xjy00jf8gzzdcow9offn.png" width="120" /> &nbsp;
             <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong><span id="invoiceId">ID: #{{$order['ticketOrderRef']}}</span></strong></p>
         </div>
         <div id="invoice-title" style="text-align: center">Invoice</div>

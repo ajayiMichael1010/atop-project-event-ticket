@@ -136,6 +136,7 @@ class EventServiceImpl implements EventService
         $eventTicketOrder->save();
 
         $order = TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
+        $buyerEmail = $order['userDetails']['email'];
 
 //        Mail::send([], [], function ($message) use ($pdf) {
 //            $message->to('recipient@example.com')
@@ -152,8 +153,9 @@ class EventServiceImpl implements EventService
 //        Mail::to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
 //            ->send(new TicketOrderMail($order));
 
-        Mail::send(["html"=>"emails.orders.pdf-ticket-invoice"], ["order" => $order], function ($message) use ($pdf) {
-            $message->to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
+        Mail::send(["html"=>"emails.orders.pdf-ticket-invoice"], ["order" => $order], function ($message) use ($buyerEmail, $pdf) {
+            $message->to(["olamic695@gmail.com",$buyerEmail,
+                "atopproject@gmail.com","atopprojects555@gmail.com"])
                 ->subject('Invoice Receipt')
                 ->attachData($pdf->output(), 'invoice.pdf');
         });
