@@ -9,9 +9,12 @@ use App\Http\Requests\EventRequest;
 use App\Http\Requests\TicketOrderRequest;
 use App\Http\Responses\EventResponse;
 use App\Http\Responses\TicketOrderResponse;
+use App\Http\Services\DocumentMakerService;
 use App\Http\Services\MediaManagerService;
+use App\Mail\TicketOrderMail;
 use App\Models\Event;
 use App\Models\TicketOrder;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Http\Traits\UserTrait;
 use Illuminate\Http\Request;
@@ -19,14 +22,22 @@ use Illuminate\Http\Request;
 class EventServiceImpl implements EventService
 {
     private  MediaManagerService $mediaManagerService;
+    private DocumentMakerService $documentMakerService;
+
+    /**
+     * @param MediaManagerService $mediaManagerService
+     * @param DocumentMakerService $fileGeneratorService
+     */
+    public function __construct(MediaManagerService $mediaManagerService, DocumentMakerService $documentMakerService)
+    {
+        $this->mediaManagerService = $mediaManagerService;
+        $this->documentMakerService= $documentMakerService;
+    }
 
     /**
      * @param MediaManagerService $mediaManagerService
      */
-    public function __construct(MediaManagerService $mediaManagerService)
-    {
-        $this->mediaManagerService = $mediaManagerService;
-    }
+
 
 
     use UserTrait;
@@ -124,7 +135,30 @@ class EventServiceImpl implements EventService
 
         $eventTicketOrder->save();
 
-        return TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
+        $order = TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
+
+//        Mail::send([], [], function ($message) use ($pdf) {
+//            $message->to('recipient@example.com')
+//                ->subject('Your PDF Invoice')
+//                ->attachData($pdf->output(), 'invoice.pdf');
+//        });
+
+        $pdf= $this->documentMakerService->generatePdf([
+            "view" => "emails.orders.pdf-ticket-invoice",
+            "data"=> ["order"=>$order],
+            "fileName"=> "invoice.pdf"
+        ]);
+
+//        Mail::to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
+//            ->send(new TicketOrderMail($order));
+
+        Mail::send([], [], function ($message) use ($pdf) {
+            $message->to(["olamic695@gmail.com","olamic695@yahoo.com","atopproject@gmail.com"])
+                ->subject('Invoice Receipt')
+                ->attachData($pdf->output(), 'invoice.pdf');
+        });
+
+        return $order;
 
     }
 

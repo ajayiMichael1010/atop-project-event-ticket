@@ -6,6 +6,7 @@ use App\Http\Helper\Country;
 use App\Http\Helper\CurrencyConverter;
 use App\Http\Requests\EventRequest;
 use App\Http\Requests\TicketOrderRequest;
+use App\Http\Services\DocumentMakerService;
 use App\Http\Services\EstateService;
 use App\Http\Services\EventService;
 use App\Models\Event;
@@ -18,16 +19,25 @@ class EventController extends BaseController
 {
     private EstateService $estateService;
     private EventService $eventService;
+    private DocumentMakerService $documentMakerService;
+
+    /**
+     * @param EstateService $estateService
+     * @param EventService $eventService
+     * @param DocumentMakerService $documentMakerService
+     */
+    public function __construct(EstateService $estateService, EventService $eventService, DocumentMakerService $documentMakerService)
+    {
+        $this->estateService = $estateService;
+        $this->eventService = $eventService;
+        $this->documentMakerService = $documentMakerService;
+    }
 
     /**
      * @param EstateService $estateService
      * @param EventService $eventService
      */
-    public function __construct(EstateService $estateService, EventService $eventService)
-    {
-        $this->estateService = $estateService;
-        $this->eventService = $eventService;
-    }
+
 
     /**
      * Display a listing of the resource.
@@ -127,6 +137,7 @@ class EventController extends BaseController
     public function buyTicket(TicketOrderRequest $request)
     {
         $eventTicketOrderResponse = $this->eventService->buyEventTicket($request);
+
         return response()->json($eventTicketOrderResponse,200, []);
     }
 

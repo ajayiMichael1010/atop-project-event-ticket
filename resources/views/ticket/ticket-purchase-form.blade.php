@@ -11,7 +11,7 @@
             </div>
 
 
-            <form method="POST" class="p-4" id="ticketForm">
+            <form method="POST" action="{{route('buyTicket')}}" class="p-4" id="ticketForm" >
                 @csrf
 
                 <input type="hidden" name="chargesPerTicket" value="{{$event['eventCharges']}}"/>
@@ -200,7 +200,7 @@
 
     // Add an event listener for form submission
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent the default form submission
+       // e.preventDefault(); // Prevent the default form submission
         selectElement("#submitLoader").style.display="block";
 
         // Create a FormData object to store the form data
