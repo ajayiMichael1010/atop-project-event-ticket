@@ -34,8 +34,8 @@
                         <td>{{$orders['ticketOrderRef']}}</td>
                         <td>{{$orders['eventDetails']['event_title']}}</td>
                         <td>{{$orders['totalTickets']}}</td>
-                        <td>{{$orders['chargesPerTicket']}}</td>
-                        <td>{{$orders['totalCharges']}}</td>
+                        <td>{!!$orders['chargesPerTicket']!!}</td>
+                        <td>{!!$orders['totalCharges']!!}</td>
                         <td class="isPaymentConfirmedStatus">{{$orders['isPaymentConfirmedStatus']}}</td>
                         <td>
                             <input
