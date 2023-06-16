@@ -69,7 +69,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xl-8">
-                                    <!--  <p class="ms-3">Kindly receipts should be forwarded our whatsapp lines: </p>-->
+                                  <!--  <p class="ms-3">Kindly receipts should be forwarded our whatsapp lines: </p>-->
 
                                 </div>
                                 <div class="col-xl-4">
@@ -90,14 +90,14 @@
                                             data-bs-toggle="modal" data-bs-target="#exampleModal" >Pay Now</button>
                                 </div>
                             </div>
-                        </div>
                     </div>
+                </div>
 
                 </div>
             </div>
         </div>
     </div>
-    @include("event.admin-contact-modal");
+@include("event.admin-contact-modal");
 </x-app-layout>
 
 <script>
