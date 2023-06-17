@@ -39,8 +39,8 @@
                    <div class="d-flex align-items-center justify-content-center">
                        <div class="event-promotion-caption">
                            <span class="font-size-two">PURCHASE TICKET FOR OUR UPCOMING EVENT </span><span class="goldenrod font-size-one">AND ALSO</span><br>
-                           <span class="font-size-two">ACQUIRE SEPARATE RAFFLE TICKET <span class="goldenrod font-size-one">FOR A CHANCE</span> TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
-                           <span class="font-size-one">THE RAFFLE DRAW WILL TAKE PLACE <span class="goldenrod font-size-one">DURING</span> THE EVENT</span>
+                           <span class="font-size-two">ACQUIRE A RAFFLE TICKET <span class="goldenrod font-size-one">FOR A CHANCE</span> TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
+                           <span class="font-size-one goldenrod">DURING</span> THE EVENT</span>
                        </div>
                    </div>
                    <div class="countdown-container mt-3">
