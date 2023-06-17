@@ -164,7 +164,8 @@
                                         <h2 style="font-size: 18px;">
                                             Our Bank Details
                                         </h2>
-                                        <p><span><b>BANK NAME</b></span>: ATOP PROJECTS LTD</p>
+                                        <p><span><b>ACCOUNT NAME</b></span>: ATOP PROJECTS LTD</p>
+                                        <p><span><b>BANK NAME</b></span>: FIDELITY BANK</p>
                                         <p><span><b>NAIRA ACCOUNT</b></span>: 5620179182</p>
                                         <p><span><b>DOLLAR ACCOUNT</b></span>: 5250398933</p>
                                         <p><span><b>EURO ACCOUNT</b></span>: 5250398957</p>
