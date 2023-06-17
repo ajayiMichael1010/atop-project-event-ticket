@@ -40,7 +40,7 @@
                        <div class="event-promotion-caption">
                            <span class="font-size-two">PURCHASE TICKET FOR OUR UPCOMING EVENT </span><span class="goldenrod font-size-one">AND ALSO</span><br>
                            <span class="font-size-two">ACQUIRE A RAFFLE TICKET <span class="goldenrod font-size-one">FOR A CHANCE</span> TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
-                           <span class="font-size-one goldenrod">DURING</span> THE EVENT</span>
+                           <span class="font-size-one goldenrod">DURING</span>  <span class="font-size-two"> THE EVENT</span>
                        </div>
                    </div>
                    <div class="countdown-container mt-3">
