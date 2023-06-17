@@ -141,7 +141,8 @@
                                         <h2 style="font-size: 18px;">
                                             Nollywood Film Festival Germany &<br> Nega Awards Gala Nite
                                         </h2>
-                                        <p><span><b>VENUE</b></span>: Burgerzentrum-Ulrich-Strabe 9, 64331 &nbsp; </p>
+                                        <p><span><b>VENUE</b></span>: Burgerzentrum Carl-Ulrich-Strabe 9, 64331 Weiterstadt (FRANKFURT, GERMANY)
+                                            3-mins from Weiterstadt HBF Training -Station &nbsp; </p>
                                         <p><span><b>DATE</b></span>: 2023-07-29</p>
                                     </div>
 
@@ -152,7 +153,8 @@
                                         <h2 style="font-size: 18px;">
                                             Opening Film Screening
                                         </h2>
-                                        <p><span><b>VENUE</b></span>: Emmerich-Josef-Str 46A 65929 FrankFurt Am Main</p>
+                                        <p><span><b>VENUE</b></span>: HOCHST Cinema,
+                                            Emmerich-Joseph-str , 46A65929 Frankfurt AM Main</p>
                                         <p><span><b>DATE</b></span>: 2023-07-28</p>
                                     </div>
 
