@@ -50,6 +50,7 @@
             }
             .footer-content-wrapper{
                 width:300px;
+                border-bottom: 1px dashed #fdad00; ;
             }
             .countdown-text{
                 display: none;
@@ -83,6 +84,10 @@
                 .countdown-text{
                     display: block;
                     background-color: #fff;
+                }
+
+                .footer-content-wrapper{
+                    border:none;
                 }
             }
             #ticketCalculation,#submitLoader{
@@ -172,7 +177,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-light p-2">
+                    <div class="bg-light p-3">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="container">
