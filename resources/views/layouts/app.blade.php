@@ -15,10 +15,12 @@
         <style>
 
             .font-size-one{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+                font-weight: 100;
             }
             .font-size-two{
-                font-size: 1rem;
+                font-size: 1.3rem;
+                font-weight: 100;
             }
 
             #top{
@@ -62,7 +64,7 @@
 
             #countdowntimer {
                 text-align: center;
-                font-size: 40px;
+                font-size: 35px;
                 margin-top: 0px;
                 color:#1f2937;
                 border: 2px dashed #fdad00;

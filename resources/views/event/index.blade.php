@@ -1,6 +1,6 @@
 <x-app-layout xmlns="http://www.w3.org/1999/html">
 
-   <div class="container mt-3 relative">
+   <div class="container mt-3 bg-light">
        <div class="row">
            <div class="col-md-12 shadow p-3">
                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -37,9 +37,9 @@
            <div class="bg-light">
                <div class="count-down-display text-center">
                    <div>
-                       <span class="font-size-one">BUY OUR UPCOMING EVENT TICKET </span><span class="goldenrod font-size-one">& STAND A CHANCE</span><br>
-                       <span class="font-size-one">TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
-                       <span class="font-size-one"><span class="goldenrod font-size-one">DURING</span> OUR RAFFLE DRAWN </span>
+                       <span class="font-size-two">BUY OUR UPCOMING EVENT TICKET </span><span class="goldenrod font-size-one">& STAND A CHANCE</span><br>
+                       <span class="font-size-two">TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
+                       <span class="font-size-one goldenrod">DURING</span> <span class="font-size-two">OUR RAFFLE DRAWN </span>
                    </div>
                    <div class="countdown-container mt-3">
                        <div id="countdowntimer"></div>
@@ -48,7 +48,6 @@
            </div>
 
        </div>
-
 
        @foreach($events as $event)
            <div class="row align-items-center justify-content-center mt-3" id="ticketShowcase">
@@ -75,9 +74,6 @@
        @endforeach
 
    </div>
-
-
-    </footer>
 
     <script>
 
