@@ -34,7 +34,7 @@ class EventSeeder extends Seeder
             "event_charges" => "30",
             "event_type" => "Contest",
             "event_venue_capacity" => "100000",
-            "event_image_url" => "https://res.cloudinary.com/dg8z8uh8f/image/upload/v1686562753/lro0kpmkohyusxxpm4zu.jpg",
+            "event_image_url" => "https://res.cloudinary.com/dg8z8uh8f/image/upload/v1687007929/ygndi46y4rbhw5qcin5f.png",
             "event_venue_image_url" => "https://res.cloudinary.com/dg8z8uh8f/image/upload/v1686562764/sz9t8g6sylbcawaq7gjr.jpg",
         ]);
     }

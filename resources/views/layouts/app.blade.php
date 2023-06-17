@@ -46,7 +46,7 @@
             footer p{
                 font-size: 0.9rem;
                 line-height: 1.5rem;
-                color: #fdad00;
+                color: #fff;
             }
             .footer-content-wrapper{
                 width:300px;
@@ -64,7 +64,7 @@
 
             #countdowntimer {
                 text-align: center;
-                font-size: 35px;
+                font-size: 30px;
                 margin-top: 0px;
                 color:#1f2937;
                 border: 2px dashed #fdad00;
@@ -177,7 +177,7 @@
                             <div class="col-md-12">
                                 <div class="container">
                                     <div id="top"><p class="float-end"><a href="#">&#8593;</a></p></div>
-                                    <p>&copy; 2023 Atop Projects Ltd</p>
+                                    <p class="goldenrod">&copy; 2023 Atop Projects Ltd</p>
                                 </div>
 
                             </div>

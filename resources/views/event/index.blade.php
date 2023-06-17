@@ -57,7 +57,7 @@
                            <img src ="{{$event['eventImageUrl']}}"/>
                        </div>
                        <div class="col-md-6">
-                           <h2 class="uppercase text-gray-700 lead" style="font-size: 22px;font-weight: 900;"><b>{{$event['eventTitle']}}</b></h2>
+                           <h2 class="uppercase text-gray-700 lead" style="font-size: 22px;"><b>{{$event['eventTitle']}}</b></h2>
                            <p><span class="goldenrod">Venue</span>: {{$event['eventVenue']}}</p>
                            <p><span class="goldenrod">Date</span>: {{$event['eventDate']}}</p>
                            <p><span class="goldenrod">Ticket</span>: {{$event['eventCharges']}}{!!$defaultCurrencySymbol!!}</p>
