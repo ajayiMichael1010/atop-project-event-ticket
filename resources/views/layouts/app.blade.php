@@ -185,7 +185,7 @@
                             <div class="col-md-12">
                                 <div class="container">
                                     <div id="top"><p class="float-end"><a href="#">&#8593;</a></p></div>
-                                    <p class="goldenrod">&copy; 2023 Atop Projects Ltd</p>
+                                    <p class="goldenrod">&copy; 2023 Atop Projects Limited</p>
                                 </div>
 
                             </div>
