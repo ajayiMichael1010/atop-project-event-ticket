@@ -89,6 +89,9 @@
                 .footer-content-wrapper{
                     border:none;
                 }
+                .event-promotion-caption{
+                    width:60%;
+                }
             }
             #ticketCalculation,#submitLoader{
                 display: none;
