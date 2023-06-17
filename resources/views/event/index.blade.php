@@ -34,7 +34,7 @@
                    </button>
                </div>
            </div>
-           <div class="bg-light shadow mb-3">
+           <div class="bg-light">
                <div class="count-down-display text-center">
                    <div>
                        <span class="font-size-two">BUY OUR UPCOMING EVENT TICKET </span><span class="goldenrod font-size-one">& STAND A CHANCE</span><br>
@@ -42,6 +42,7 @@
                        <span class="font-size-one goldenrod">DURING</span> <span class="font-size-two">OUR RAFFLE DRAWN </span>
                    </div>
                    <div class="countdown-container mt-3">
+                       <div class="bg-goldenrod"><span>COUNTDOWN TO THE EVENT</span></div>
                        <div id="countdowntimer"></div>
                    </div>
                </div>
