@@ -14,6 +14,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
 
+            .font-size-one{
+                font-size: 1.5rem;
+            }
+            .font-size-two{
+                font-size: 1rem;
+            }
+
             #top{
                 background-color: goldenrod;
                 border-radius: 50%;
@@ -25,18 +32,22 @@
                 justify-content: center;
             }
             .footer-main-color{
-                background-color: #eee;
+                background-color: #808080;
                 color: #fff;
             }
 
             footer h2{
                 margin-bottom: 10px;
-                color: goldenrod;
+                color: #fff;
             }
 
             footer p{
                 font-size: 0.9rem;
                 line-height: 1.5rem;
+                color: #fdad00;
+            }
+            .footer-content-wrapper{
+                width:300px;
             }
             .countdown-text{
                 display: none;
@@ -47,23 +58,14 @@
                 opacity: 0.8;
                 background-color: #fff;
             }
-            .count-down-display{
-                position: relative;
-                top:20px;
-                left:20px;
-            }
-            .relative{
-                position:relative;
-            }
+
 
             #countdowntimer {
                 text-align: center;
-                font-size: 20px;
+                font-size: 40px;
                 margin-top: 0px;
                 color:#1f2937;
-                border: 2px dashed goldenrod;
-                padding: 5px;
-                top:15px;left: 15px
+                border: 2px dashed #fdad00;
             }
             @media(min-width: 768px){
                 #countdowntimer {
@@ -73,9 +75,6 @@
                 }
 
                 .count-down-display{
-                    position: absolute;
-                    top:20px;
-                    left:20px;
                     color: #1f2937;
                 }
 
@@ -88,10 +87,15 @@
                 display: none;
             }
 
-            .goldenrod{color: goldenrod}
-            .bg-goldenrod{background-color: goldenrod}
+            .goldenrod{color: #fdad00}
+            .bg-goldenrod{background-color: #fdad00}
             p{
                 line-height: 1.9rem;
+            }
+
+            .btn-color{
+                background-color: #fdad00 !important;
+                color: #fff;
             }
 
         </style>
@@ -125,20 +129,40 @@
                         <div class="container" style="color: #374151;">
                             <div class="row ">
 
-                                <div class="col-md-6 mt-3">
-                                    <h2 style="font-size: 18px;">
-                                        Nollywood Film Festival Germany &<br> Nega Awards Gala Nite
-                                    </h2>
-                                    <p><span><b>VENUE</b></span>: Burgerzentrum-Ulrich-Strabe 9, 64331 &nbsp; </p>
-                                    <p><span><b>DATE</b></span>: 2023-07-29</p>
+                                <div class="col-md-4 mt-3 d-flex  justify-content-center">
+                                    <div class="footer-content-wrapper">
+                                        <h2 style="font-size: 18px;">
+                                            Nollywood Film Festival Germany &<br> Nega Awards Gala Nite
+                                        </h2>
+                                        <p><span><b>VENUE</b></span>: Burgerzentrum-Ulrich-Strabe 9, 64331 &nbsp; </p>
+                                        <p><span><b>DATE</b></span>: 2023-07-29</p>
+                                    </div>
+
 
                                 </div>
-                                <div class="col-md-6 mt-3">
-                                    <h2 style="font-size: 18px;">
-                                        Opening Film Screening
-                                    </h2>
-                                    <p><span><b>VENUE</b></span>: Emmerich-Josef-Str 46A 65929 FrankFurt Am Main</p>
-                                    <p><span><b>DATE</b></span>: 2023-07-28</p>
+                                <div class="col-md-4 mt-3 d-flex  justify-content-center">
+                                    <div class="footer-content-wrapper">
+                                        <h2 style="font-size: 18px;">
+                                            Opening Film Screening
+                                        </h2>
+                                        <p><span><b>VENUE</b></span>: Emmerich-Josef-Str 46A 65929 FrankFurt Am Main</p>
+                                        <p><span><b>DATE</b></span>: 2023-07-28</p>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-4 mt-3 d-flex justify-content-center">
+                                    <div class="footer-content-wrapper">
+                                        <h2 style="font-size: 18px;">
+                                            Our Bank Details
+                                        </h2>
+                                        <p><span><b>BANK NAME</b></span>: ATOP PROJECTS LTD</p>
+                                        <p><span><b>NAIRA ACCOUNT</b></span>: 5620179182</p>
+                                        <p><span><b>DOLLAR ACCOUNT</b></span>: 5250398933</p>
+                                        <p><span><b>EURO ACCOUNT</b></span>: 5250398957</p>
+                                    </div>
+
 
                                 </div>
 

@@ -1,8 +1,8 @@
 <x-app-layout xmlns="http://www.w3.org/1999/html">
 
-   <div class="container mt-3 shadow relative">
+   <div class="container mt-3 relative">
        <div class="row">
-           <div class="col-md-12 shadow-sm p-3">
+           <div class="col-md-12 shadow p-3">
                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                    <div class="carousel-inner">
                        <div class="carousel-item active" data-bs-interval="30000">
@@ -34,23 +34,15 @@
                    </button>
                </div>
            </div>
-
-           <div class="row">
-               <div class="col-md-12">
-                   <div class="count-down-display p-2 shadow">
-                       <div>
-                           <span class="text-center uppercase" style="font-size: 1.5rem">Upcoming Event</span>
-                           <a href="#ticketShowcase" type="button" class="btn btn-primary"
-                              style="background-color: goldenrod;font-size: 1rem; color: #fff;font-weight: bold">Buy Ticket</a>
-                       </div>
-                       <div class="countdown-container mt-3">
-                           <div id="countdowntimer"></div>
-                       </div>
-                       <div class="uppercase mt-3 shadow countdown-text">
-                           <span style="color: goldenrod;font-size:1.6rem;">Countdown to</span> <br> RAFFLE DRAWN, OF 2BEDROOM FLAT AT PRIME HOME ESTATE <span style="color:goldenrod;font-size:1.6rem">&</span><br>
-                           NOLLYWOOD FILM FESTIVAL GERMANY &
-                           NEGA AWARDS GALA NITE
-                       </div>
+           <div class="bg-light">
+               <div class="count-down-display text-center">
+                   <div>
+                       <span class="font-size-one">BUY OUR UPCOMING EVENT TICKET </span><span class="goldenrod font-size-one">& STAND A CHANCE</span><br>
+                       <span class="font-size-one">TO WIN A 2-BEDROOM FLAT <span class="goldenrod font-size-one">AT</span> PRIME HOME ESTATE</span><br>
+                       <span class="font-size-one"><span class="goldenrod font-size-one">DURING</span> OUR RAFFLE DRAWN </span>
+                   </div>
+                   <div class="countdown-container mt-3">
+                       <div id="countdowntimer"></div>
                    </div>
                </div>
            </div>
