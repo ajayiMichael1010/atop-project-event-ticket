@@ -34,7 +34,7 @@
                    </button>
                </div>
            </div>
-           <div class="bg-light">
+           <div class="bg-light shadow mb-3">
                <div class="count-down-display text-center">
                    <div>
                        <span class="font-size-two">BUY OUR UPCOMING EVENT TICKET </span><span class="goldenrod font-size-one">& STAND A CHANCE</span><br>
