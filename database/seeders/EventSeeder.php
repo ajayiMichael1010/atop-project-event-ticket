@@ -31,7 +31,7 @@ class EventSeeder extends Seeder
             "event_venue" => "Burgerzentrum-Ulrich-Strabe 9, 64331 Weiterstadt HBF Training -Station",
             "event_date" => "2023-06-29",
             "event_organizer" => "Ehizoya Golden Entertainment (EGE)",
-            "event_charges" => "30",
+            "event_charges" => "250",
             "event_type" => "Contest",
             "event_venue_capacity" => "100000",
             "event_image_url" => "https://res.cloudinary.com/dg8z8uh8f/image/upload/v1687007929/ygndi46y4rbhw5qcin5f.png",
