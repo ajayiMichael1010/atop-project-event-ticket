@@ -70,6 +70,10 @@
                 color:#1f2937;
                 border: 2px dashed #fdad00;
             }
+
+            a.whatsapp-link:hover{
+                color: #fdad00;
+            }
             @media(min-width: 768px){
                 #countdowntimer {
                     text-align: center;

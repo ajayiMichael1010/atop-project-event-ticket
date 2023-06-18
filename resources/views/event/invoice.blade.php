@@ -11,10 +11,10 @@
                                 <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong><span id="invoiceId">ID: #123-123</span></strong></p>
                             </div>
                             <div class="col-xl-3 float-end">
-                                <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
+                                <!--<a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
                                         class="fa fa-print text-primary"></i> Print</a>
                                 <a class="btn btn-light text-capitalize" data-mdb-ripple-color="dark"><i
-                                        class="fa fa-file-pdf text-danger"></i> Save</a>
+                                        class="fa fa-file-pdf text-danger"></i> Save</a>-->
                             </div>
                             <hr>
                         </div>
@@ -30,7 +30,7 @@
 
 
                             <div class="row">
-                                <div class="col-xl-8">
+                                <div class="col-xl-8 mt-2">
                                     <ul class="list-unstyled">
                                         <li class="text-muted">From: <span style="color:#5d9fc5 ;">ATOP Projects Ltd</span></li>
                                         <li class="text-muted">2, Church Street, off Asajon Street, Sangotedo</li>
@@ -38,7 +38,7 @@
                                         <li class="text-muted"><i class="fa fa-phone" aria-hidden="true"></i> (+234) 0806 229 1780 </li>
                                     </ul>
                                 </div>
-                                <div class="col-xl-4">
+                                <div class="col-xl-4 mt-2">
                                     <p class="text-muted" id="buyer"></p>
                                     <ul class="list-unstyled">
                                         <li class="text-muted"><i class="fa fa-circle" style="color:#84B0CA ;"></i> <span
@@ -52,20 +52,23 @@
                                 </div>
                             </div>
 
-                            <div class="row my-2 mx-1 justify-content-center mt-3">
-                                <table class="table table-striped table-borderless">
-                                    <thead style="background-color:#84B0CA ;" class="text-white">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col" style="width: 40%">Description</th>
-                                        <th scope="col">Qty</th>
-                                        <th scope="col">Unit Price</th>
-                                        <th scope="col">Amount</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="invoiceDetails">
-                                    </tbody>
-                                </table>
+                            <div class="row justify-content-center mt-3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-borderless">
+                                        <thead style="background-color:#84B0CA ;" class="text-white">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col" style="width: 40%">Description</th>
+                                            <th scope="col">Qty</th>
+                                            <th scope="col">Unit Price</th>
+                                            <th scope="col">Amount</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="invoiceDetails">
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-xl-8">
