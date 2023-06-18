@@ -84,9 +84,13 @@
                                         class="fw-bold invoiceId">Invoice ID: #{{$order['ticketOrderRef']}}</span></li>
                                 <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                                         class="fw-bold" id="invoiceDate"></span>{{$order['invoiceDate']}}</li>
-                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                        class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold" style="color: orangered">
-                  Unpaid</span></li>
+                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i>
+                                    <span
+                                        class="me-1 fw-bold">Status:</span>
+                                    <span class="badge bg-warning text-black fw-bold" style="color: orangered">
+                                        {{$order["isPaymentConfirmedStatus"]=="Confirmed" ?"Paid" : "Unpaid"}}
+                                    </span>
+                                </li>
                             </ul>
                         </td>
                 </tr>

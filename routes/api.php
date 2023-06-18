@@ -24,4 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post("converted-amount", [AccountingController::class,"convertCurrency"])->name("convertCurrency");
 Route::post('buy-ticket', [EventController::class, 'buyTicket'])->name('buyTicket');
 Route::put('update-payment-confirmation/{ticketId}', [EventController::class, 'updateIsPaymentConfirmed'])->name('updateIsPaymentConfirmed');
+Route::get('send-ticket/{ticketId}', [EventController::class, 'sendTicket'])->name('sendTicket');
 //Route::get("/estate", [PrimeHomeEstateController::class, 'getEstates'])->name('getEstate');

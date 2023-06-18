@@ -12,9 +12,9 @@
                             </div>
                             <div class="col-xl-3 float-end">
                                 <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
-                                        class="fas fa-print text-primary"></i> Print</a>
+                                        class="fa fa-print text-primary"></i> Print</a>
                                 <a class="btn btn-light text-capitalize" data-mdb-ripple-color="dark"><i
-                                        class="far fa-file-pdf text-danger"></i> Save</a>
+                                        class="fa fa-file-pdf text-danger"></i> Save</a>
                             </div>
                             <hr>
                         </div>
@@ -35,17 +35,17 @@
                                         <li class="text-muted">From: <span style="color:#5d9fc5 ;">ATOP Projects Ltd</span></li>
                                         <li class="text-muted">2, Church Street, off Asajon Street, Sangotedo</li>
                                         <li class="text-muted">Lagos, Nigeria</li>
-                                        <li class="text-muted"><i class="fas fa-phone"></i> (+234) 0806 229 1780 </li>
+                                        <li class="text-muted"><i class="fa fa-phone" aria-hidden="true"></i> (+234) 0806 229 1780 </li>
                                     </ul>
                                 </div>
                                 <div class="col-xl-4">
                                     <p class="text-muted" id="buyer"></p>
                                     <ul class="list-unstyled">
-                                        <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                        <li class="text-muted"><i class="fa fa-circle" style="color:#84B0CA ;"></i> <span
                                                 class="fw-bold invoiceId"></span></li>
-                                        <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                        <li class="text-muted"><i class="fa fa-circle" style="color:#84B0CA ;"></i> <span
                                                 class="fw-bold" id="invoiceDate"></span></li>
-                                        <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                                        <li class="text-muted"><i class="fa fa-circle" style="color:#84B0CA ;"></i> <span
                                                 class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
                   Unpaid</span></li>
                                     </ul>
@@ -82,7 +82,7 @@
                             <div class="row">
                                 <div class="col-xl-10">
                                     <p>Our Whatsapp numbers</p>
-                                    <span class="text-info">(+234) 0806 293 7553 / (+234) 703 368 8363 </span>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-info">(+234) 0806 293 7553 / (+234) 703 368 8363 </span>
                                 </div>
                                 <div class="col-xl-2 mt-3">
                                     <button type="button" class="btn btn-primary text-capitalize"

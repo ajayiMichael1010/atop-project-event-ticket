@@ -11,7 +11,7 @@ class CurrencyConverter
         [
             "name" => "Naira",
             "shortName" => "NGN",
-            "symbol" => "&#8358;"
+            "symbol" => "&#x20A6;"
         ],
         [
             "name" => "Euro",

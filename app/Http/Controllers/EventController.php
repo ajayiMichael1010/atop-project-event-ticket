@@ -152,6 +152,13 @@ class EventController extends BaseController
         return response()->json($isPaymentConfirmed,200,[]);
     }
 
+    public function sendTicket(int $ticketId): JsonResponse
+    {
+        $this->eventService->sendTicket($ticketId);
+        return response()->json("Ticket sent",200,[]);
+
+    }
+
     public function getServerInfo(){
         phpinfo();
         return view("event.info", []);
