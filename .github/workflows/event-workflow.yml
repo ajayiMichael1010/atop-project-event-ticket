@@ -32,8 +32,8 @@ jobs:
 #      - name: Composer Dump Autoload
 #        run: composer dump-autoload --optimize
 
-#      - name: Optimize Artisan
-#        run: php artisan optimize
+      - name: Optimize Artisan
+        run: php artisan optimize
 
 #      - name: Cache Routes
 #        run: php artisan route:cache
