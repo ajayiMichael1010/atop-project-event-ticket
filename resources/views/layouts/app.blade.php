@@ -155,7 +155,7 @@
 
 
                                 </div>
-                                <div class="col-md-4 mt-3 d-flex  justify-content-center">
+                                <div class="col-md-3 mt-3 d-flex  justify-content-center">
                                     <div class="footer-content-wrapper">
                                         <h2 style="font-size: 18px;">
                                             Opening Film Screening
@@ -168,7 +168,7 @@
 
                                 </div>
 
-                                <div class="col-md-4 mt-3 d-flex justify-content-center">
+                                <div class="col-md-3 mt-3 d-flex justify-content-center">
                                     <div class="footer-content-wrapper">
                                         <h2 style="font-size: 18px;">
                                             Our Bank Details
@@ -179,8 +179,15 @@
                                         <p><span><b>DOLLAR ACCOUNT</b></span>: 5250398933</p>
                                         <p><span><b>EURO ACCOUNT</b></span>: 5250398957</p>
                                     </div>
-
-
+                                </div>
+                                <div class="col-md-2 mt-3 d-flex justify-content-center">
+                                    <div class="footer-content-wrapper">
+                                        <h2 style="font-size: 18px;">
+                                            Our Contacts
+                                        </h2>
+                                        <p><span class="fa fa-globe"></span><a href="https://atopprojects.com/" target="_blank">&nbsp;Website</a></p>
+                                        <p><span class="fa fa-phone"></span> (+234) 0806 293 7553<br>&nbsp;&nbsp;&nbsp;&nbsp;(+234) 0806 229 1780</p>
+                                    </div>
                                 </div>
 
                             </div>

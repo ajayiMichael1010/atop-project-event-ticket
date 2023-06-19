@@ -116,11 +116,6 @@ class EventController extends BaseController
         //
     }
 
-    public function showTicketOrders(){
-        $pageTitle = "Ticket Orders";
-        return view("event.ticket-orders", compact("pageTitle"));
-    }
-
     public function getTicketForm(int $eventId)
     {
         //echo CurrencyConverter::getConvertedAmount(1,"USD" ,"NGN");
@@ -128,7 +123,7 @@ class EventController extends BaseController
         $countries = Country::getAllCountries();
         $currencyTypes = CurrencyConverter::CURRENCY_TYPES;
         $event = $this->eventService->getEventById($eventId);
-        return view("ticket.ticket-purchase-form",
+        return view("event.ticket-purchase-form",
             compact("countries","event","pageTitle","currencyTypes")
         );
     }
@@ -145,7 +140,8 @@ class EventController extends BaseController
         return view("event.invoice" , compact([]));
     }
 
-    public function updateIsPaymentConfirmed(int $ticketId): JsonResponse
+
+    public function confirmTicketPayment(int $ticketId): JsonResponse
     {
         $isPaymentConfirmed = $this->eventService->confirmTicketPayment($ticketId);
 
@@ -160,6 +156,7 @@ class EventController extends BaseController
     }
 
     public function getServerInfo(){
+        //FOR DEBUGGING PURPOSE
         phpinfo();
         return view("event.info", []);
     }
