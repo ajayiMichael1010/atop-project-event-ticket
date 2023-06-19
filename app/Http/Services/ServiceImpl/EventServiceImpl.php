@@ -3,6 +3,7 @@
 namespace App\Http\Services\ServiceImpl;
 
 use App\Http\Helper\CurrencyConverter;
+use App\Http\Helper\HelperFunction;
 use App\Http\Services\EventService;
 use App\Http\Enums\UserRole;
 use App\Http\Requests\EventRequest;
@@ -122,9 +123,10 @@ class EventServiceImpl implements EventService
         $totalCharges = $chargesAfterConversion['convertedAmount'] * $request->totalTickets;
 
         $newTicketId  = TicketOrder::latest()->value('id');
+        $newTicketId = HelperFunction::leadingZero($newTicketId);
 
         $eventTicketOrder = new TicketOrder;
-        $eventTicketOrder->ticket_order_ref = $newTicketId.rand(10000, 99999);
+        $eventTicketOrder->ticket_order_ref ="TK".$newTicketId."-".rand(10000, 99999);
         $eventTicketOrder->unconverted_charges_per_ticket = $chargesPerTicket;
         $eventTicketOrder->charges_per_ticket = $chargesAfterConversion['convertedAmount'];
         $eventTicketOrder->total_tickets = $request->totalTickets;
@@ -158,7 +160,7 @@ class EventServiceImpl implements EventService
         return TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
     }
 
-    public function updateIsEventPaymentConfirmed(int $ticketId)
+    public function confirmTicketPayment(int $ticketId)
     {
         $eventTicketOrder = TicketOrder::findOrFail($ticketId);
         $eventTicketOrder->is_ticket_payment_confirmed = !$eventTicketOrder->is_ticket_payment_confirmed;
@@ -181,8 +183,7 @@ class EventServiceImpl implements EventService
 
         $pdf= $this->documentMakerService->generatePdf([
             "view" => "emails.orders.pdf-ticket-invoice",
-            "data"=> ["order"=>$order],
-            "fileName"=> "ticket-invoice.pdf"
+            "data"=> ["order"=>$order]
         ]);
 
 
@@ -190,7 +191,7 @@ class EventServiceImpl implements EventService
             $message->to(["olamic695@gmail.com",$buyerEmail,
                 "atopproject@gmail.com"])
                 ->subject('Invoice Receipt')
-                ->attachData($pdf->output(), 'invoice.pdf');
+                ->attachData($pdf->output(), 'ticket-invoice.pdf');
         });
     }
 

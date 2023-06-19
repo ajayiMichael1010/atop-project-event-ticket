@@ -49,7 +49,7 @@ class EventController extends BaseController
         $estates = $this->estateService->getEstates();
         return view("event.index", compact("events", "pageTitle","defaultCurrencySymbol","estates"));
     }
-    public function index()
+    public function dashboard()
     {
         $pageTitle = "Orders ";
        $ticketOrders =  $this->eventService->getAllOrderedTickets();
@@ -147,7 +147,7 @@ class EventController extends BaseController
 
     public function updateIsPaymentConfirmed(int $ticketId): JsonResponse
     {
-        $isPaymentConfirmed = $this->eventService->updateIsEventPaymentConfirmed($ticketId);
+        $isPaymentConfirmed = $this->eventService->confirmTicketPayment($ticketId);
 
         return response()->json($isPaymentConfirmed,200,[]);
     }

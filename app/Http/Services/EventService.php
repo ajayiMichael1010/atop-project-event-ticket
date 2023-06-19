@@ -20,7 +20,7 @@ interface EventService
     public function sendTicket(int $ticketId);
     public function getAllOrderedTickets();
     public function getOrderedTicketById(int $id);
-    public function updateIsEventPaymentConfirmed(int $ticketId);
+    public function confirmTicketPayment(int $ticketId);
     public function deleteTicketById(int $ticketId);
 
 }

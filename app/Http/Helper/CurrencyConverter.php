@@ -55,7 +55,7 @@ class CurrencyConverter
     }
 
     public static function getCurrencySymbol(string $currencyType){
-        $currencyDetails = CurrencyConverter::getCurrencyTypeDetails($currencyType);
+        $currencyDetails = self::getCurrencyTypeDetails($currencyType);
         return $currencyDetails['symbol'];
     }
 

@@ -34,6 +34,7 @@ Route::Resources([
     'estate' => PrimeHomeEstateController::class,
 ]);
 
+Route::get("event", [EventController::class, "dashboard"])->name("dashboard");
 Route::get("/info", [EventController::class, "getServerInfo"])->name("getServerInfo");
 
 
