@@ -32,14 +32,14 @@ jobs:
 #      - name: Composer Dump Autoload
 #        run: composer dump-autoload --optimize
 
-      - name: Optimize Artisan
-        run: php artisan optimize
+#      - name: Optimize Artisan
+#        run: php artisan optimize
 
-#      - name: Cache Routes
-#        run: php artisan route:cache
-#
-#      - name: Cache Config
-#        run: php artisan config:cache
+      - name: Cache Routes
+        run: php artisan route:cache
+
+      - name: Cache Config
+        run: php artisan config:cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
