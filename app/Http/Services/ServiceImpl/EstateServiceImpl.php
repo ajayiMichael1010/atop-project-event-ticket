@@ -6,6 +6,7 @@ use App\Http\Services\MediaManagerService;
 use App\Models\PrimeHomeEstate;
 use Illuminate\Http\Request;
 use App\Http\Services\EstateService;
+use Illuminate\Support\Facades\Cache;
 
 
 class EstateServiceImpl implements EstateService
@@ -33,8 +34,15 @@ class EstateServiceImpl implements EstateService
         $estate->save();
     }
 
+//    public function getEstates(): \Illuminate\Database\Eloquent\Collection
+//    {
+//        return PrimeHomeEstate::all();
+//    }
+
     public function getEstates(): \Illuminate\Database\Eloquent\Collection
     {
-        return PrimeHomeEstate::all();
+        return Cache::remember('all_estates', 60, function () {
+            return PrimeHomeEstate::all();
+        });
     }
 }

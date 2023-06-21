@@ -15,6 +15,7 @@ use App\Http\Services\MediaManagerService;
 use App\Mail\TicketOrderMail;
 use App\Models\Event;
 use App\Models\TicketOrder;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Http\Traits\UserTrait;
@@ -55,10 +56,18 @@ class EventServiceImpl implements EventService
         $this->setUpEventDetails($request, $event);
     }
 
+//    public function getAllEvents(): array
+//    {
+//        $events = Event::all();
+//        return EventResponse::mapAllEvents($events);
+//    }
+
     public function getAllEvents(): array
     {
-        $events = Event::all();
-        return EventResponse::mapAllEvents($events);
+        return Cache::remember('all_events_1', 60, function () {
+            $events = Event::all();
+            return EventResponse::mapAllEvents($events);
+        });
     }
 
     public function getEventById(int $eventId): array
@@ -156,7 +165,10 @@ class EventServiceImpl implements EventService
 
     public function getOrderedTicketById($id): array
     {
-        $eventTicketOrder = TicketOrder::with('getEvent','getUser')->findOrFail($id);
+
+        $eventTicketOrder = Cache::remember('ticket_order_1', 60, function () use ($id) {
+            return TicketOrder::with('getEvent', 'getUser')->findOrFail($id);
+        });
         return TicketOrderResponse::mapSingleTicketOrder($eventTicketOrder);
     }
 
