@@ -64,7 +64,7 @@ class EventServiceImpl implements EventService
 
     public function getAllEvents(): array
     {
-        return Cache::remember('all_events_1', 60, function () {
+        return Cache::remember('all_events_1', 3600, function () {
             $events = Event::all();
             return EventResponse::mapAllEvents($events);
         });
