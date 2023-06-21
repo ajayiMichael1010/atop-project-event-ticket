@@ -41,7 +41,7 @@ class EstateServiceImpl implements EstateService
 
     public function getEstates(): \Illuminate\Database\Eloquent\Collection
     {
-        return Cache::rememberForever('all_estates', function () {
+        return Cache::rememberForever('all_estates_1', function () {
             return PrimeHomeEstate::all();
         });
     }
