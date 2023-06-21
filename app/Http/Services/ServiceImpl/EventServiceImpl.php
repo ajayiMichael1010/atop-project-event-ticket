@@ -12,14 +12,11 @@ use App\Http\Responses\EventResponse;
 use App\Http\Responses\TicketOrderResponse;
 use App\Http\Services\DocumentMakerService;
 use App\Http\Services\MediaManagerService;
-use App\Mail\TicketOrderMail;
 use App\Models\Event;
 use App\Models\TicketOrder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
 use App\Http\Traits\UserTrait;
-use Illuminate\Http\Request;
 
 class EventServiceImpl implements EventService
 {
@@ -64,10 +61,10 @@ class EventServiceImpl implements EventService
 
     public function getAllEvents(): array
     {
-        return Cache::remember('all_events_1', 3600, function () {
-            $events = Event::all();
-            return EventResponse::mapAllEvents($events);
+        $events = Cache::rememberForever('all_events_1', function () {
+            return Event::all();
         });
+        return EventResponse::mapAllEvents($events);
     }
 
     public function getEventById(int $eventId): array
