@@ -52,6 +52,15 @@
 
        </div>
 
+       <div class="row align-items-center justify-content-center mt-3">
+
+           <div class="col-md-7 shadow-sm p-3">
+               <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/99dC3vxlc8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+           </div>
+       </div>
+
+
        @foreach($events as $event)
            <div class="row align-items-center justify-content-center mt-3" id="ticketShowcase">
                <div class="col-md-7 shadow-sm p-3">

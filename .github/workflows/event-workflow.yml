@@ -20,8 +20,8 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-      - name: Php artisan view cache
-        run: php artisan view:cache
+#      - name: Php artisan view cache
+#        run: php artisan view:cache
 
 #      - name: Clear Config Cache
 #        run: php artisan config:clear
