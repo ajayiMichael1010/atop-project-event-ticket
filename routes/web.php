@@ -38,6 +38,4 @@ Route::get("event", [EventController::class, "dashboard"])->name("dashboard");
 Route::get("/info", [EventController::class, "getServerInfo"])->name("getServerInfo");
 
 
-
-
 require __DIR__.'/auth.php';
