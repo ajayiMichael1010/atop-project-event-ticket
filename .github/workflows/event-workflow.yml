@@ -9,10 +9,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-#      - name: Copy .env
-#        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-#      - name: Generate key
-#        run: php artisan key:generate
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - name: Generate key
+        run: php artisan key:generate
 
       - name: Install NPM Dependencies
         run: npm install
@@ -20,34 +20,34 @@ jobs:
       - name: Compile Css and Js Assets
         run: npm run build
 
-#      - name: Php artisan view cache
-#        run: php artisan view:cache
+      - name: Clear Config Cache
+        run: php artisan config:clear
 
-#      - name: Clear Config Cache
-#        run: php artisan config:clear
-#
-#      - name: Clear Application Cache
-#        run: php artisan cache:clear
-#
-#      - name: Clear Route Cache
-#        run: php artisan route:clear
+      - name: Clear Application Cache
+        run: php artisan cache:clear
 
-#      - name: Composer Dump Autoload
-#        run: composer dump-autoload --optimize
+      - name: Clear Route Cache
+        run: php artisan route:clear
 
-#      - name: Optimize Artisan
-#        run: php artisan optimize
+      - name: Composer Dump Autoload
+        run: composer dump-autoload --optimize
 
-#      - name: Cache Routes
-#        run: php artisan route:cache
-#
-#      - name: Cache Config
-#        run: php artisan config:cache
+      - name: Optimize Artisan
+        run: php artisan optimize
+
+      - name: Cache Routes
+        run: php artisan route:cache
+
+      - name: Cache Config
+        run: php artisan config:cache
+
+      - name: Php artisan view cache
+        run: php artisan view:cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: atopprojects.com
-          username: atoppro@atopprojects.com
-          password: G3V3ui5Oj)!bZ2
-          server-dir: public_html/event.atopprojects.com/
+          server: mssolutions.com.ng
+          username: mssolutionsftp@mssolutions.com.ng
+          password: y%eh,ua4.@#L
+          server-dir: public_html/chrisv
